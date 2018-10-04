@@ -1,0 +1,50 @@
+.button {
+    width: 95vw;
+    margin: 10px 2.5vw;
+    padding: 12px 5px 10px;
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    transition: background-color .25s ease-out,color .25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    text-align: left;
+    position: relative;
+}
+.userauth-buttons {
+    position: absolute;
+    bottom: 42px;
+}
+.oauthbuttonText {
+  display: block;
+  text-align: center;
+  letter-spacing: 0;
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.randomBlue {
+    background-color: #3781b3;
+    color: #fff;
+}
+.lightBlue {
+    background-color: #008FD7;
+    color: #fff; 
+}
+.lightBlueRev {
+    color: #008FD7;
+    background-color: #fff; 
+}
+.randomGray {
+    color: #8b8b8b;
+    background-color: #fff;
+}
+.lightGray {
+    color: rgba(139, 139, 139, .5);
+    background-color: #fff;
+}

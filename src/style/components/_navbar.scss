@@ -1,0 +1,409 @@
+// @import './../lib/vars'; 
+header {
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.25);
+  min-height: 50px;
+  transition: transform .2s linear;
+  font-size: 17px;
+  line-height: 1.59;
+  color: #111;
+}
+.navPrimary {
+  width: auto;
+  position: relative;
+  height: 50px;
+  background-color: #008FD7;
+  overflow: hidden;
+  padding: 7.5px 0 0 19px;
+  z-index: 1000;
+}
+.navPrimary-toggle {
+  position: relative;
+  top: 10px;
+  width: 20px;
+  height: 15px;
+  float: left;
+  margin-right: 14px;
+  display: block;
+  cursor: pointer;
+}
+.navPrimary-toggle span:nth-child(1) {
+  top: 0;
+}
+.navPrimary-toggle span:nth-child(2) {
+  top: 6px;
+}
+.navPrimary-toggle span:nth-child(3) {
+  top: 6px;
+}
+.navPrimary-toggle span:nth-child(4) {
+  top: 12px;
+}
+.ddOpen span:nth-child(1) {
+  width: 0;
+}
+.ddOpen span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ddOpen span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ddOpen span:nth-child(4) {
+  width: 0;
+}
+.navPrimary-toggle span {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #FFF;
+  left: 0;
+  opacity: 1;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  transition: .2s ease-in-out;
+}
+.navcoinlogo {
+  height: 30px;
+}
+.extrapadding {
+  margin: 10px;
+}
+.navPrimary-logo {
+  display: block;
+  float: left;
+  width: 158px;
+  height: 36px;
+  text-indent: 75px;
+  background-image: url(https://i.imgur.com/q2wzhF6.png);
+  background-repeat: no-repeat;
+  background-size: 75px 36px;
+  outline: 0!important;
+  cursor: pointer;
+}
+.logo1 {
+  font-weight: 700;
+  position: absolute;
+  text-indent: 5px;
+  margin-top: -2.5px;
+  font-size: 16px;
+}
+.logo2 {
+  position: absolute;
+  text-indent: 5px;
+  margin-top: 12.5px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.navPrimary-dropdown {
+  min-height: 100vh;
+  width: 85vw;
+  padding: 7.5px 0 0 19px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.navShadow {
+  width: 100%;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.25);
+  position: fixed;
+  z-index: 500;
+  height: 70px;
+}
+.navPrimary-menu {
+  padding-top: 70px;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+  list-style: none;
+  padding-left: 0 !important;
+  height: 100%;
+}
+.navPrimary-li {
+  text-align: left;
+  width: auto;
+}
+.navPrimary-li-text {
+  display: block;
+  text-decoration: none;
+  color: #008FD7;
+  font-size: 22px;
+  line-height: 1;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+  cursor: pointer;
+}
+.navPrimary-li-text:hover {
+  color: #3c3c3c;
+}
+.buttonAuthFormParentDiv {
+  text-align: center;
+}
+.darkNavSection {
+  background-color: #153F90;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+}
+.ddContainer {
+  min-height: calc((100vh - 50px));
+}
+.question {
+  margin: 0 0 0 2.5vw;
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 500;
+  color: rgba(139, 139, 139, 0.5);
+}
+.signInBanner {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 10px;
+
+  p {
+    font-weight: 500;
+    color: #646462;
+  }
+}
+.darkNavSection-auth {
+  background-color: #153F90;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 140px;
+  text-align: right;
+
+  .coins {
+    color: #fff;
+    margin-right: 50px;
+    margin-top: 10px;
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .navcoinlogo {
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+.darkNavSection-ddOpen{
+  position: absolute;
+   left: 0;
+   width: calc((80vw - 60px));
+   text-align: left;
+
+   .distanceContainer {
+    display: inline-block;
+   }
+   .distance {
+     height: 50px;
+    display: inline-block;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+    }
+   }
+  .coins {
+    display: inline-block;
+  }
+}
+.ddOpen {
+  margin-top: 7.5px;
+  position: absolute;
+  right: calc((20vw));
+}
+
+.navPrimary-li {
+  position: relative;
+  min-height: 64px;
+
+  .navPrimary-li-text{
+    text-align: left;
+
+    img {
+      height: 40px;
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+    }
+    span {
+      font-weight: 500;
+      margin-left: 35px;
+    }
+  }
+}
+.logoutButton {
+  position: absolute !important;
+  bottom: 30px !important;
+  margin: 0 !important;
+  width: calc((80vw - 55px)) !important;
+  cursor: pointer !important;
+}
+// nav form
+.navForm-div {
+  margin: 10px auto 40px;
+  
+  .userauth-form {
+    font-size: 17px;
+    line-height: 1.59;
+    color: #8b8b8b;
+    width: 95vw;
+    margin: auto;
+
+    h2.title {
+      margin-bottom: 15px;
+      font-size: 17px;
+      color: #8b8b8b;
+      line-height: 1.2;
+      font-weight: 600;
+      margin: 0 0 15px !important;
+      position: absolute;
+      top: 0;
+    }
+    .button {
+      margin: 10px 0;
+    }
+    input {
+      font-size: 13px;
+      background-color: transparent !important;
+      border: 1px solid #dfe4e4;
+      border-radius: 8px;
+      box-shadow: none;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 39px;
+      padding: 8px;
+      margin: 0 0 24px;
+      color: #8b8b8b;
+      transition: box-shadow .5s,border-color .25s ease-in-out;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-left: 44px;
+    }
+    input:active, input:focus {
+      border: 1px solid gba(139, 139, 139, 0.2);
+      box-shadow: 0 1px 4px 0 rgba(139, 139, 139, 0.2);
+      -webkit-box-shadow: 0 0 5px #afafaf;
+      transition: box-shadow .5s,border-color .25s ease-in-out;
+    }
+  }
+}
+.oauthDiv img {
+  margin: 0 13.5px;
+  width: 21px;
+  position: absolute;
+  left: 0;
+}
+.orLine {
+  position: relative;
+  text-align: center;
+  height: 10px;
+  margin-top: 10px;
+}
+.or {
+  padding: 0 10px;
+  background: #fff;
+  position: absolute;
+  z-index: 1500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgba(139, 139, 139, .5);
+  font-size: 12px;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+}
+.underline {
+  position: absolute;
+  bottom: 50%;
+  width: 100vw;
+  border-bottom: 1px solid rgba(139, 139, 139, .2);
+}
+// hacky but removes chrome's yellow autofill input background
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+   -webkit-box-shadow: 0 0 0px 1000px white inset!important;
+   color: #8b8b8b !important;
+}
+
+input:active, input:focus {
+  border: 1px solid color rgba(139, 139, 139, 0.2);
+  box-shadow: 0 0 5px #afafaf;
+  -webkit-box-shadow: 0 0 5px #afafaf;
+  transition: box-shadow .5s,border-color .25s ease-in-out;
+}
+.username-availability {
+  padding-left: 10px;
+  color: #8b8b8b;
+  font-size: 13px;
+}
+.indentSmall {
+  margin-left: 0 !important;
+}
+.grayedoutnav {
+  background: rgb(80, 80, 80);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20vw;
+  z-index: 9999;
+  height: 100vh;
+}
+@media (max-width: 399px) {
+  .indentSmall {
+    padding-left: 35px; 
+  }
+  .navPrimary-li .navPrimary-li-text .dcicon {
+    bottom: inherit;
+  }
+  .dc-li {
+    margin-bottom: 22px !important;
+  }
+}
+@media (min-width: 400px) {
+  .break {
+    display: none;
+  }
+}

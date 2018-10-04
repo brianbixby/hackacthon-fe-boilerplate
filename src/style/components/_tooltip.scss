@@ -1,0 +1,20 @@
+.tooltip {
+  height: 0;
+
+  section {
+    transform: translateY(-27px);
+    position: relative;
+    margin-bottom: 1vw;
+    width: 100%;
+    
+    p {
+        font-weight: 500;
+        font-size: 12px;
+        min-height: 16px;
+        margin-left: 10px;
+        width: auto;
+        display: inline-block;
+        color: #d50000;
+    }
+  }
+}
