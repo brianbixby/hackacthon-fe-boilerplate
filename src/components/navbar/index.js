@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { signUpRequest, signInRequest, signOut } from '../../actions/userAuth-actions.js';
 import { userProfileFetchRequest } from '../../actions/userProfile-actions.js';
-import { currentLocationFetchRequest } from '../../actions/map-actions.js';
 import UserAuthForm from '../userAuth-form';
 import { classToggler, logError, renderIf } from '../../lib/util.js';
 
@@ -13,9 +12,6 @@ class Navbar extends React.Component {
   constructor(props){
     super(props);
     this.state={ showDropDown: false, authFormAction: 'Register' };
-  }
-  componentDidMount() {
-    return this.props.currentLocationFetch();
   }
   handleSignin = (user, errCB) => {
     return this.props.signIn(user)
@@ -167,7 +163,6 @@ class Navbar extends React.Component {
 let mapStateToProps = state => ({
   userAuth: state.userAuth,
   userProfile: state.userProfile,
-  currentLocation: state.currentLocation,
 });
 
 let mapDispatchToProps = dispatch => ({
@@ -175,7 +170,6 @@ let mapDispatchToProps = dispatch => ({
   signIn: user => dispatch(signInRequest(user)),
   userProfileFetch: () => dispatch(userProfileFetchRequest()),
   signOut: () => dispatch(signOut()),
-  currentLocationFetch: () => dispatch(currentLocationFetchRequest()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

@@ -4,7 +4,6 @@ import { browserHistory } from 'react-router';
 
 import { tokenSignInRequest } from '../../actions/userAuth-actions.js';
 import { userProfileFetchRequest, userProfileUpdateRequest } from '../../actions/userProfile-actions.js';
-import { currentLocationFetchRequest } from '../../actions/map-actions.js';
 import Intro from '../intro';
 import UserProfileForm from '../userProfile-form';
 // import Modal from '../helpers/modal';
@@ -48,14 +47,12 @@ class LandingContainer extends React.Component {
 let mapStateToProps = state => ({
   userAuth: state.userAuth,
   userProfile: state.userProfile,
-  currentLocation: state.currentLocation,
 });
 
 let mapDispatchToProps = dispatch => ({
   tokenSignIn: token => dispatch(tokenSignInRequest(token)),
   userProfileFetch: () => dispatch(userProfileFetchRequest()),
   userProfileUpdate: profile => dispatch(userProfileUpdateRequest(profile)),
-  currentLocationFetch: () => dispatch(currentLocationFetchRequest()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LandingContainer);
